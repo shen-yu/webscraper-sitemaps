@@ -1,0 +1,105 @@
+{
+    "_id": "bilibili_rank",
+    "startUrl": [
+        "https://www.bilibili.com/v/popular/rank/all"
+    ],
+    "selectors": [
+        {
+            "id": "container",
+            "type": "SelectorElement",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": "li.rank-item",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "title",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "a.title",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "play_amount",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".detail > span:nth-of-type(1)",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "danmu_count",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "span:nth-of-type(2)",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "detail_link",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "a.title",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "coin",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "detail_link"
+            ],
+            "selector": ".coin",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "collect",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "detail_link"
+            ],
+            "selector": ".collect",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "like",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "detail_link"
+            ],
+            "selector": ".like",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "share",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "detail_link"
+            ],
+            "selector": ".share",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}
