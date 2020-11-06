@@ -1,0 +1,50 @@
+{
+    "_id": "javlibrary",
+    "startUrl": [
+        "http://www.javlibrary.com/cn/vl_bestrated.php?&mode=&page=[0-25]"
+    ],
+    "selectors": [
+        {
+            "id": "container",
+            "type": "SelectorElement",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": ".videos .video",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "code",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".id",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "image",
+            "type": "SelectorImage",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "img",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "title",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".title",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}

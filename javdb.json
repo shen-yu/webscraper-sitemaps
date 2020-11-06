@@ -1,0 +1,72 @@
+{
+    "_id": "javdb",
+    "startUrl": [
+        "https://javdb.com/rankings/video_censored?period=daily"
+    ],
+    "selectors": [
+        {
+            "id": "container",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": ".video-container .columns .column>a",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "title",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "h2.title",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "cover",
+            "type": "SelectorImage",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".column-video-cover a img",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "code",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".video-panel-info div.panel-block:first-of-type span.value",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "score",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".video-panel-info div.panel-block:nth-of-type(6) span.value",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "magnet",
+            "type": "SelectorElementAttribute",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".video-panel table tr:first-child>td.magnet-name>a",
+            "multiple": false,
+            "extractAttribute": "href",
+            "delay": 0
+        }
+    ]
+}

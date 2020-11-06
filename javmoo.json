@@ -1,0 +1,61 @@
+{
+    "_id": "avmoo",
+    "startUrl": [
+        "https://avmoo.site/cn/popular/page/[1-100]"
+    ],
+    "selectors": [
+        {
+            "id": "item",
+            "type": "SelectorElement",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": "#waterfall .item",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "title",
+            "type": "SelectorElementAttribute",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".movie-box .photo-frame img",
+            "multiple": false,
+            "extractAttribute": "title",
+            "delay": 0
+        },
+        {
+            "id": "cover",
+            "type": "SelectorImage",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".movie-box img",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "code",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".photo-info span date:first-of-type",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "date",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".photo-info span date:last-of-type",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}
