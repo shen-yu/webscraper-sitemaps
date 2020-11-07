@@ -1,0 +1,93 @@
+{
+    "_id": "porn91",
+    "startUrl": [
+        "http://91porn.com/v.php?category=rf&viewtype=basic&page=[1-50]"
+    ],
+    "selectors": [
+        {
+            "id": "container",
+            "type": "SelectorElement",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": ".row>div",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "title",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "a>span.video-title",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "image",
+            "type": "SelectorImage",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": ".thumb-overlay img",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "duration",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "span.duration",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "link",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "container"
+            ],
+            "selector": "a",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "like",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "link"
+            ],
+            "selector": "#useraction .boxPart:first-of-type span.info:nth-of-type(4)>span",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "view",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "link"
+            ],
+            "selector": "#useraction .boxPart:first-of-type span.info:nth-of-type(2)>span",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "author",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "link"
+            ],
+            "selector": "#videodetails-content>div:nth-of-type(3) .title-yakov>a>span",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}

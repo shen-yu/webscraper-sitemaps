@@ -1,0 +1,84 @@
+{
+    "_id": "tube85",
+    "startUrl": [
+        "https://85tube.com/most-popular/[1-50]/"
+    ],
+    "selectors": [
+        {
+            "id": "item",
+            "type": "SelectorElement",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": "#list_videos_common_videos_list_items .item",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "title",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": "strong.title",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "image",
+            "type": "SelectorElementAttribute",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": "a>.img img",
+            "multiple": false,
+            "extractAttribute": "data-preview",
+            "delay": 0
+        },
+        {
+            "id": "duration",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".duration",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "rating",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".rating",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "views",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".views",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "add_time",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "item"
+            ],
+            "selector": ".added",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}
